@@ -1,0 +1,39 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "Base repo for static websites deployed to S3",
+  "repository": "git@github.com:alright-studio/static.git",
+  "author": "Alright Studio LLC",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf build && rm .aws-cache",
+    "start": "gulp watch",
+    "build": "NODE_ENV=production gulp",
+    "deploy": "gulp deploy"
+  },
+  "dependencies": {
+    "autoprefixer": "^8.3.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.7",
+    "cssnano": "^3.10.0",
+    "dotenv": "^5.0.1",
+    "eslint": "^4.19.1",
+    "event-stream": "^3.3.4",
+    "gulp": "^3.9.1",
+    "gulp-awspublish": "^3.3.3",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rollup": "^2.16.2",
+    "gulp-rollup-each": "^2.1.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "lodash": "^4.17.10",
+    "pump": "^3.0.0",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "8.3.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-stream": "^1.24.1"
+  }
+}

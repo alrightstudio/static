@@ -1,0 +1,40 @@
+{
+	"parser": "babel-eslint",
+	"env": {
+		"node": true,
+		"browser": true
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"comma-dangle": [
+			"off"
+		],
+		"indent-legacy": [
+			"warn",
+			"tab",
+			{"SwitchCase": 1}
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"warn",
+			"single"
+		],
+		"no-console": [
+			"off"
+		],
+		"no-useless-escape": [
+			"off"
+		],
+		"semi": [
+			"warn",
+			"always"
+		],
+		"no-unused-vars": [
+			"warn",
+			{"vars": "all", "args": "none"}
+		]
+	}
+}

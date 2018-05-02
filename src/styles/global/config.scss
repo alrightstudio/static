@@ -1,0 +1,45 @@
+/*
+// === Config Variables ===
+*/
+
+$all-colors: (
+	white : #fff,
+	black : #3B424E,
+	blue  : #F4FFFD,
+);
+
+$breakpoints : (
+	xs : 400px,
+	sm : 600px,
+	md : 800px,
+	lg : 1000px,
+	xl : 1200px
+);
+
+$font-size-body: 14px;
+$line-height-body: 24px;
+
+/*
+// === Config Getter Functions ===
+*/
+
+@function color($color-name) {
+	$color-found: map-has-key($all-colors, $color-name);
+	@if ($color-found == true) {
+		@return map-get($all-colors, $color-name);
+	} @else {
+		@warn "Color " + #{$color-name} + " doesn't exist.";
+	}
+}
+
+@mixin breakpoint($size) {
+	$breakpoint-found: map-has-key($breakpoints, $size);
+	@if ($breakpoint-found == true) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media (min-width: #{$breakpoint}) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint size " + #{$size} + " doesn't exist."
+	}
+}
