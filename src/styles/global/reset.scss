@@ -69,8 +69,3 @@ a, button {
 		background: rgba(color(blue), 0.5);
 	}
 }
-
-// Force desktop only
-html, body {
-	min-width: 1000px;
-}
