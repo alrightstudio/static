@@ -110,7 +110,7 @@ const imageFileSource = [
 gulp.task('sass', callback => {
 	pump([
 		gulp.src('./src/styles/*.scss'),
-		sass().on('error', sass.logError),
+		sass({includePaths: './src/styles'}).on('error', sass.logError),
 		postcss(postCssPlugins),
 		gulp.dest('./build/assets'),
 		browserSync.stream()
